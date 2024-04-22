@@ -4,9 +4,14 @@
 
 This guide outlines the setup and operation of the Turtlebot3 for disaster response scenarios, utilizing ROS packages for navigation, SLAM, and object detection. Ensure both the Turtlebot and a local computer are correctly configured and connected to the same network.
 
-Video Link for the whole Pipeline in Simulation + Real TurtleBot - https://northeastern-my.sharepoint.com/:v:/g/personal/nallaguntla_h_northeastern_edu/EQyfsn_andxGnihdCObEl7IB3qCCX-qOz7gG8-DuO9IJ_A?xsdata=MDV8MDJ8ZG9rYW5pYS5zQG5vcnRoZWFzdGVybi5lZHV8MTRiNTE4ZWQ0OTBiNGZlOGVjYjIwOGRjNjI5Y2FiNzF8YThlZWMyODFhYWEzNGRhZWFjOWI5YTM5OGI5MjE1ZTd8MHwwfDYzODQ5MzY3MjIzMzA3MDI0MnxVbmtub3dufFRXRnBiR1pzYjNkOGV5SldJam9pTUM0d0xqQXdNREFpTENKUUlqb2lWMmx1TXpJaUxDSkJUaUk2SWsxaGFXd2lMQ0pYVkNJNk1uMD18MHx8fA%3d%3d&sdata=UE5rK2taMTRreDR0OUxJRWxaY0lYYjNYbWJWc1prc0E2dnZWMnRrQXVqYz0%3d
+Video Link for the whole Pipeline in Simulation + Real TurtleBot - 
+https://northeastern-my.sharepoint.com/:v:/g/personal/nallaguntla_h_northeastern_edu/EQyfsn_andxGnihdCObEl7IB3qCCX-qOz7gG8-DuO9IJ_A?xsdata=MDV8MDJ8ZG9rYW5pYS5zQG5vcnRoZWFzdGVybi5lZHV8MTRiNTE4ZWQ0OTBiNGZlOGVjYjIwOGRjNjI5Y2FiNzF8YThlZWMyODFhYWEzNGRhZWFjOWI5YTM5OGI5MjE1ZTd8MHwwfDYzODQ5MzY3MjIzMzA3MDI0MnxVbmtub3dufFRXRnBiR1pzYjNkOGV5SldJam9pTUM0d0xqQXdNREFpTENKUUlqb2lWMmx1TXpJaUxDSkJUaUk2SWsxaGFXd2lMQ0pYVkNJNk1uMD18MHx8fA%3d%3d&sdata=UE5rK2taMTRreDR0OUxJRWxaY0lYYjNYbWJWc1prc0E2dnZWMnRrQXVqYz0%3d
 
-Here we can see the exploration working for both the simulation (TurtleBot House Environment) and the real robot (custom made environment shown in the following figure). The AprilTags are also localized and marked on the map accurately.
+In the Video the turtlebot explorates in both the simulation (TurtleBot House Environment) and the real robot (custom made environment shown in the following figure). The AprilTags are also localized and marked on the map accurately.
+
+*Custom Demo Environment: *
+   
+![Demo Environment](https://github.com/Srijan221/EECE5550_Final_Project/assets/69648635/bc8500b7-c6bb-4aff-bbe2-c802f22933d0)
 
 
 ## Prerequisites
