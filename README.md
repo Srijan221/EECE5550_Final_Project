@@ -1,43 +1,70 @@
-# Turtlebot3 Disaster Response Project
+# Turtlebot3 Disaster Response Guide
 
+## Overview
 
-## How to run
+This guide outlines the setup and operation of the Turtlebot3 for disaster response scenarios, utilizing ROS packages for navigation, SLAM, and object detection. Ensure both the Turtlebot and a local computer are correctly configured and connected to the same network.
 
-### On Turtlebot
-Open camera:
-```bash
-roslaunch usb_cam_node usb_cam_node.launch
-```
+## Prerequisites
 
-Bringup turtlebot
-```bash
-roslaunch turtlebot3_bringup turtlebot3_robot.launch
-```
+- Turtlebot3 equipped with a USB camera.
+- ROS environment set up on both Turtlebot3 and a local computer.
+- Relevant ROS packages installed: `turtlebot3_slam`, `explore_lite`, `turtlebot3_navigation`, `usb_cam`, `apriltag_ros`.
 
-### On Local Computer
-```bash
-roscore
-1. `roslaunch turtlebot3_bringup turtlebot3_robot.launch` on turtlebot3 to bringup the robot.
-2. `roslaunch turtlebot3_navigation move_base.launch` to start navigation.
-3. `roslaunch turtlebot3_slam turtlebot3_slam.launch` to start SLAM.
-4. roslaunch explore_lite explore.launch` 
-```
+## Setup Instructions
 
+### Turtlebot Setup
 
-### ROS Packages
+1. **Activate the USB Camera:**
+   ```bash
+   roslaunch usb_cam usb_cam_node.launch
+   ```
 
-We use the following ros packages:
-1. `turtlebot3_slam`: package provides roslaunch scripts for starting the SLAM. We choose `gmapping` as our SLAM method. 
-2. `explore_lite`: package provides greedy frontier-based exploration. 
-3. `turtlebot3_navigation`:  provides roslaunch scripts for starting the navigation. 
+2. **Initialize Turtlebot3:**
+   ```bash
+   roslaunch turtlebot3_bringup turtlebot3_robot.launch
+   ```
 
-To control the turtlebot, we need to bringup turtlebot3. 
+### Local Computer Setup
 
+1. **Start ROS Core:**
+   ```bash
+   roscore
+   ```
 
-### Locate any apriltag in the environment
+2. **Launch Turtlebot3 Robot:**
+   ```bash
+   roslaunch turtlebot3_bringup turtlebot3_robot.launch
+   ```
 
-Start the USB camera on turtlebot3:
-```bash
-roslaunch usb_cam_node usb_cam_node.launch
-```
-Then, we can use `apriltag_ros` package to identify the tags in the image. `apriltag_ros` package subscribes `usb_camera/image_raw`, and `usb_cam/camera_info`.
+3. **Begin Navigation:**
+   ```bash
+   roslaunch turtlebot3_navigation move_base.launch
+   ```
+
+4. **Initiate SLAM:**
+   ```bash
+   roslaunch turtlebot3_slam turtlebot3_slam.launch
+   ```
+
+5. **Start Exploration:**
+   ```bash
+   roslaunch explore_lite explore.launch
+   ```
+
+## ROS Packages Overview
+
+- **`turtlebot3_slam`:** Provides launch scripts for SLAM operations using the Gmapping method.
+- **`explore_lite`:** Implements a greedy frontier-based algorithm for autonomous exploration.
+- **`turtlebot3_navigation`:** Contains scripts for navigation setup on the Turtlebot3.
+
+## Detecting AprilTags in the Environment
+
+1. **Start the USB Camera on Turtlebot3:**
+   ```bash
+   roslaunch usb_cam usb_cam_node.launch
+   ```
+
+2. **Launch AprilTag Detection:**
+   The `apriltag_ros` package will subscribe to `usb_camera/image_raw` and `usb_cam/camera_info` to detect and decode AprilTags within the camera's view.
+
+This setup allows the Turtlebot3 to autonomously navigate and explore a disaster site while detecting critical markers for effective response operations.
